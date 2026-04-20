@@ -1,120 +1,229 @@
-🌍 AI Smart News Sphere
+<div align="center">
 
-AI Smart News Sphere is a dual-mode intelligent news aggregator that combines advanced Natural Language Processing (NLP) with Generative AI to cluster, analyze, and provide deep insights into news stories.
+<br/>
 
-This project features two distinct components:
+```
+███╗   ██╗███████╗██╗    ██╗███████╗    ███████╗██████╗ ██╗  ██╗███████╗██████╗ ███████╗
+████╗  ██║██╔════╝██║    ██║██╔════╝    ██╔════╝██╔══██╗██║  ██║██╔════╝██╔══██╗██╔════╝
+██╔██╗ ██║█████╗  ██║ █╗ ██║███████╗    ███████╗██████╔╝███████║█████╗  ██████╔╝█████╗  
+██║╚██╗██║██╔══╝  ██║███╗██║╚════██║    ╚════██║██╔═══╝ ██╔══██║██╔══╝  ██╔══██╗██╔══╝  
+██║ ╚████║███████╗╚███╔███╔╝███████║    ███████║██║     ██║  ██║███████╗██║  ██║███████╗
+╚═╝  ╚═══╝╚══════╝ ╚══╝╚══╝ ╚══════╝    ╚══════╝╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝
+```
 
-Web Dashboard: A responsive, Thistle-themed web application powered by Google Gemini Pro for deep analysis (Sentiment, Root Cause, Historical Context).
+# 🌍 AI Smart News Sphere
 
-Python CLI Engine: A robust backend script that fetches live news (NewsData.io & RSS), performs TF-IDF vectorization, and clusters topics using Scikit-Learn.
+**A dual-mode intelligent news aggregator powered by NLP, Machine Learning & Generative AI.**
 
-🚀 Features
+[![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![HTML5](https://img.shields.io/badge/HTML5-Web%20Dashboard-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-Styled-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![Gemini](https://img.shields.io/badge/Google%20Gemini-Pro-8E24AA?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev)
+[![License](https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge)](LICENSE)
 
-🖥️ Web Dashboard (news_aggregator.html)
+<br/>
 
-AI-Powered Analysis: Uses Google Gemini Pro to generate summaries, sentiment scores, and detailed insights.
+> *Don't just read the news — understand it.*
 
-Novelty Insights:
+<br/>
 
-Root Cause Analysis: Explains the "why" behind the news.
+</div>
 
-Historical Context: Connects current events to past occurrences.
+---
 
-✨ Follow-up Questions: Generates insightful questions for further reading.
+## ✨ What is AI Smart News Sphere?
 
-Modern UI: Responsive grid layout with a polished "Thistle" (Purple/White) aesthetic.
+**AI Smart News Sphere** is a dual-mode intelligent news aggregator that goes beyond simple headlines. It combines advanced **Natural Language Processing (NLP)** with **Generative AI** to cluster, analyze, and surface deep insights from news stories — so you don't just know *what* happened, you understand *why* it matters.
 
-Smart Filtering: Filter news by Category, Location (USA/India), and Type.
+The project ships in two distinct but complementary forms:
 
-🐍 Python CLI Engine (smart_newssphere.py)
+| Mode | Component | Purpose |
+|------|-----------|---------|
+| 🖥️ **Web Dashboard** | `news_aggregator.html` | Responsive Thistle-themed UI with Gemini Pro AI analysis |
+| 🐍 **Python CLI Engine** | `smart_newssphere.py` | Live data fetching, TF-IDF clustering, terminal reports |
 
-Live Data Fetching: Pulls real-time articles from NewsData.io API and BBC RSS feeds.
+---
 
-Machine Learning Clustering: Uses TF-IDF Vectorization and Agglomerative Clustering to group related stories automatically.
+## 🚀 Features
 
-Console Reporting: Displays structured text summaries and clustering stats in the terminal.
+### 🖥️ Web Dashboard — `news_aggregator.html`
 
-📂 Project Structure
+> Powered by **Google Gemini Pro** for rich, multi-layered analysis.
 
-NewsSphere/
+- **🤖 AI-Powered Analysis** — Generates summaries, sentiment scores, and contextual insights per article
+- **🔍 Root Cause Analysis** — Explains the *why* behind every story, not just the *what*
+- **📜 Historical Context** — Connects current events to relevant past occurrences
+- **❓ Follow-up Questions** — Auto-generates thought-provoking questions for deeper reading
+- **🎨 Modern Thistle UI** — Polished purple/white responsive grid layout
+- **🔎 Smart Filtering** — Filter articles by **Category**, **Location** (USA/India), and **Type**
+
+---
+
+### 🐍 Python CLI Engine — `smart_newssphere.py`
+
+> A robust ML-backed backend that runs entirely in your terminal.
+
+- **📡 Live Data Fetching** — Pulls real-time articles from **NewsData.io API** and **BBC RSS feeds**
+- **🧠 TF-IDF Vectorization** — Converts raw text into machine-readable feature vectors
+- **🗂️ Agglomerative Clustering** — Groups semantically related stories into meaningful topic clusters automatically
+- **📊 Console Reporting** — Structured text summaries and clustering stats printed in your terminal
+
+---
+
+## 📂 Project Structure
+
+```
+news_aggregator_project/
 │
-├── news_aggregator.html    # MAIN WEB APP: The visual dashboard (Mock Data + Gemini AI)
+├── 📁 news_aggregator_project/     # Django project config
+│   ├── __init__.py
+│   ├── asgi.py                     # ASGI entry point
+│   ├── settings.py                 # Project settings & configuration
+│   ├── urls.py                     # Root URL routing
+│   └── wsgi.py                     # WSGI entry point
 │
-├── smart_newssphere.py     # MAIN PYTHON SCRIPT: Entry point for the CLI aggregator
-├── fetcher.py              # Module: Fetches data from APIs and RSS feeds
-├── topic_clustering.py     # Module: Handles TF-IDF and Clustering logic
-├── nlp_processor.py        # Module: Processes text for the Python CLI
+├── 📁 news_collector/              # Main Django app
+│   ├── 📁 migrations/              # Database migrations
+│   ├── __init__.py
+│   ├── admin.py                    # Django admin configuration
+│   ├── apps.py                     # App configuration
+│   ├── models.py                   # Database models (Article, etc.)
+│   ├── scraper.py                  # News scraping & fetching logic
+│   ├── tests.py                    # Unit tests
+│   └── views.py                    # Request handlers & API views
 │
-└── README.md               # Project Documentation
+├── 📄 outcome                      # Sample output / results
+├── 🐍 manage.py                    # Django management CLI
+├── 🔧 .gitattributes
+└── 📖 README.md                    # Project Documentation
+```
 
+---
 
-🛠️ Prerequisites
+## 🛠️ Tech Stack
 
-To run this project, you need:
+| Layer | Technology |
+|-------|-----------|
+| **Frontend** | HTML5, Tailwind CSS, Vanilla JavaScript |
+| **AI / LLM** | Google Gemini Pro API |
+| **Backend** | Python 3.8+, Django |
+| **ML / NLP** | Scikit-Learn (TF-IDF, Agglomerative Clustering), NumPy |
+| **Data Sources** | NewsData.io API, BBC RSS Feeds |
+| **Database** | Django ORM (SQLite by default) |
 
-Python 3.8+ installed on your system.
+---
 
-API Keys:
+## 📦 Prerequisites
 
-Google Gemini API Key: For the Web Dashboard.
+Before you begin, make sure you have:
 
-NewsData.io API Key: For the Python CLI live fetching.
+- ✅ **Python 3.8+** installed
+- ✅ A **Google Gemini API Key** — [Get one here](https://ai.google.dev)
+- ✅ A **NewsData.io API Key** — [Get one here](https://newsdata.io)
 
-📦 Installation
+---
 
-Clone or Download the project folder.
+## ⚙️ Installation
 
-Install Python Dependencies (required for the Python CLI version):
+**1. Clone or download the project:**
+```bash
+git clone https://github.com/akshatxn/news-aggregator-project.git
+cd news-aggregator-project
+```
 
-Open your terminal/command prompt in the project folder and run:
+**2. Install Python dependencies:**
+```bash
+pip install django requests feedparser scikit-learn numpy
+```
 
-pip install requests feedparser scikit-learn numpy
+**3. Apply database migrations:**
+```bash
+python manage.py migrate
+```
 
+---
 
-🖥️ How to Run: Web Dashboard
+## 🖥️ Running the Web Dashboard
 
-The web dashboard requires a local server to function correctly (to avoid browser security blocks).
+The web dashboard requires a local server to avoid browser CORS security blocks.
 
-Open your Command Prompt or PowerShell.
-
-Navigate to your project directory:
-
+**Step 1 — Start a local server:**
+```bash
 cd path/to/NewsSphere
-
-
-Start a Local Server:
-
 python -m http.server 8000
+```
 
+**Step 2 — Open in your browser:**
+```
+http://localhost:8000/news_aggregator.html
+```
 
-Open your web browser (Edge, Chrome, etc.) and go to:
-👉 http://localhost:8000/news_aggregator.html
+**Step 3 — Configure your Gemini API Key:**
 
-🔑 Configuration:
+Open `news_aggregator.html` in any code editor and find line ~380:
+```javascript
+const apiKey = "";  // 👈 Paste your Google Gemini API Key here
+```
 
-To enable the AI features locally, open news_aggregator.html in a code editor.
+---
 
-Find the line const apiKey = ""; (around line 380).
+## 🐍 Running the Python CLI Engine
 
-Paste your Google Gemini API Key inside the quotes.
+The CLI engine fetches live news and runs ML clustering directly in your terminal.
 
-🐍 How to Run: Python CLI (Live Data)
+**Step 1 — Set your NewsData.io API Key:**
 
-This version runs in your terminal and fetches real-time news.
+Open `fetcher.py` and set:
+```python
+NEWSDATA_API_KEY = "your_api_key_here"
+```
 
-Open fetcher.py in a code editor.
-
-Ensure your NewsData.io API Key is set in the NEWSDATA_API_KEY variable.
-
-Run the main script:
-
+**Step 2 — Run the main script:**
+```bash
 python smart_newssphere.py
+```
 
+The script will:
+1. 📡 Fetch live articles from NewsData.io and BBC RSS
+2. 🧠 Run TF-IDF vectorization on article content
+3. 🗂️ Cluster related stories using Agglomerative Clustering
+4. 📊 Print grouped topic summaries to your console
 
-The script will fetch live articles, perform clustering algorithms, and print the grouped topics to your console.
+---
 
-🤖 Tech Stack
+## 🔑 API Keys — Quick Reference
 
-Frontend: HTML5, Tailwind CSS, Vanilla JavaScript.
+| Key | Used In | Where to Get |
+|-----|---------|-------------|
+| `Google Gemini API Key` | Web Dashboard (`news_aggregator.html`) | [ai.google.dev](https://ai.google.dev) |
+| `NewsData.io API Key` | Python CLI (`fetcher.py`) | [newsdata.io](https://newsdata.io) |
 
-Backend (CLI): Python, Scikit-Learn (Sklearn), NumPy.
+> ⚠️ **Never commit your API keys to version control.** Consider using environment variables or a `.env` file in production.
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+1. Fork the repository
+2. Create a new branch: `git checkout -b feature/your-feature-name`
+3. Make your changes and commit: `git commit -m "Add some feature"`
+4. Push to the branch: `git push origin feature/your-feature-name`
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+
+Made with ❤️ by [akshatxn](https://github.com/akshatxn)
+
+⭐ If you found this project useful, consider giving it a star!
+
+</div>
